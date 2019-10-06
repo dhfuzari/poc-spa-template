@@ -4,6 +4,8 @@
   "description": "A simple spa template to help you start your project",
   "main": "index.js",
   "scripts": {
+    "start": "gulp",
+    "build": "gulp --production",
     "test": "test"
   },
   "repository": {
