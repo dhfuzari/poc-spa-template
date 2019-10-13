@@ -3,9 +3,7 @@ const uglifyCss = require('gulp-uglifycss');
 const concat = require('gulp-concat');
 
 
-gulp.task('deps', ['deps.css', 'deps.fonts',], () => {
-
-});
+gulp.task('deps', ['deps.css', 'deps.fonts']);
 
 gulp.task('deps.css', () => {
     return gulp.src([
@@ -13,11 +11,10 @@ gulp.task('deps.css', () => {
     ])
         .pipe(uglifyCss({ "uglyComments": true }))
         .pipe(concat('deps.min.css'))
-        .pipe(gulp.dest('build/assets/css'))
-
+        .pipe(gulp.dest('build/assets/css'));
 });
 
 gulp.task('deps.fonts', () => {
     return gulp.src(['node_modules/font-awesome/fonts/*.*'])
-        .pipe(gulp.dest('build/assets/fonts'))
+        .pipe(gulp.dest('build/assets/fonts'));
 });
