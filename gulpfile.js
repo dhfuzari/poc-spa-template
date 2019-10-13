@@ -8,11 +8,11 @@ require('./gulpTasks/server');
 
 gulp.task('default', () => {
   if (util.env.production) {
-    // sequence('deps', 'app'); // An old way to run tasks sequencially
-    gulp.start('deps', 'app');
+    sequence('deps', 'app'); // An old way to run tasks sequencially
+    // gulp.start('deps', 'app');
   } else {
-    // sequence('deps', 'app', 'server'); // An old way to run tasks sequencially
-    gulp.start('deps', 'app', 'server');
+    sequence('deps', 'app', 'server'); // An old way to run tasks sequencially
+    // gulp.start('deps', 'app', 'server');
   }
 })
 

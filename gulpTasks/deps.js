@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const uglifyCss = require('gulp-uglifycss');
 const concat = require('gulp-concat');
 
-
 gulp.task('deps', ['deps.css', 'deps.fonts']);
 
 gulp.task('deps.css', () => {
